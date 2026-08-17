@@ -1,0 +1,31 @@
+div h4{
+    background-color: skyblue;
+}
+h4{
+    background-color: blue;
+    color: lavender;
+    font-size: 30px;
+}
+
+p{
+    background-color: yellow;
+}
+h1{
+    background-color: blueviolet;
+}
+Spam{
+    background-color: green;
+}
+button{
+    background-color: aqua;
+}
+a{
+    background-color: lawngreen;
+}
+#heading1{
+    background-color: red;
+}
+#id2{
+    background-color: gold;
+}
+
