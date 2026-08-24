@@ -1,0 +1,40 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+form {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 400px;
+    border: 1px solid gray;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
