@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+
+    line-height: 1.8;
+}
+
+/* Article header */
+header {
+    background-color: #172554;
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Main article */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+
+    padding: 0 30px;
+}
+
+article {
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Author and date */
+.article-info {
+    text-align: center;
+
+    color: #64748b;
+
+    margin-bottom: 30px;
+}
+
+/* Paragraph spacing */
+article p {
+    margin-bottom: 25px;
+}
+
+/* First letter */
+article p::first-letter {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* First line */
+article p::first-line {
+    font-weight: bold;
+}
+
+/* Highlight */
+mark {
+    background-color: #fde68a;
+    color: #78350f;
+
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Blockquote */
+blockquote {
+    margin: 30px 0;
+    padding: 20px 25px;
+
+    background-color: #eff6ff;
+
+    border-left: 6px solid #2563eb;
+
+    color: #1e3a8a;
+
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: #172554;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+
+    article {
+        padding: 25px;
+    }
+}
