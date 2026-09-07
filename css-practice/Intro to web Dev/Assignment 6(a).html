@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Portfolio</title>
+
+    <style>
+        /* Q1 - Personal Portfolio */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 45px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Main */
+        main {
+            flex: 1;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 40px 45px;
+        }
+
+        /* About section */
+        .about {
+            width: 55%;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 20px;
+            max-width: 600px;
+        }
+
+        /* Image section */
+        .image {
+            width: 40%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            width: 375px;
+            height: 465px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+
+            background-color: #333;
+            color: white;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            main {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 45px;
+            }
+
+            .about {
+                width: 100%;
+            }
+
+            .image {
+                width: 100%;
+            }
+
+            .image img {
+                width: 250px;
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Q1: Personal Portfolio -->
+
+    <header>
+
+        <h1>Riya Tomar</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                Hello! I am a B.Tech student interested in web development and
+                programming. I enjoy learning new technologies and building simple
+                and useful projects.
+            </p>
+
+        </section>
+
+
+        <section class="image">
+
+            <img src="images/image.jpeg" alt="My Photo">
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Riya Tomar. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>

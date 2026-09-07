@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q7 - Loading Animation</title>
+
+    <style>
+
+        /* =====================================================
+           Q7: DESIGN A CSS LOADING ANIMATION
+
+           Requirements:
+           - Only div elements
+           - Three small circles
+           - Circles move up and down
+           - Use @keyframes
+           - Each circle has a delay
+           - Center using Flexbox
+           - Use translateY()
+           - Animation runs infinitely
+           ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background-color: #f2f2f2;
+        }
+
+        /* Loading container */
+
+        .loader {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        /* Circles */
+
+        .circle {
+
+            width: 20px;
+
+            height: 20px;
+
+            background-color: black;
+
+            border-radius: 50%;
+
+            animation-name: loading;
+
+            animation-duration: 0.8s;
+
+            animation-iteration-count: infinite;
+        }
+
+        /* First circle */
+
+        .circle:nth-child(1) {
+
+            animation-delay: 0s;
+        }
+
+        /* Second circle */
+
+        .circle:nth-child(2) {
+
+            animation-delay: 0.2s;
+        }
+
+        /* Third circle */
+
+        .circle:nth-child(3) {
+
+            animation-delay: 0.4s;
+        }
+
+        /* Animation */
+
+        @keyframes loading {
+
+            0% {
+
+                transform: translateY(0);
+            }
+
+            50% {
+
+                transform: translateY(-25px);
+            }
+
+            100% {
+
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         Q7: LOADING ANIMATION
+         ===================================================== -->
+
+    <div class="loader">
+
+        <div class="circle"></div>
+
+        <div class="circle"></div>
+
+        <div class="circle"></div>
+
+    </div>
+
+</body>
+</html>

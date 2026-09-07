@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q10 - Responsive Website</title>
+
+    <style>
+
+        /*
+        QUESTION 10:
+        Create a responsive webpage using Flexbox and CSS Grid.
+
+        Requirements:
+        1. Header should contain logo and navigation.
+        2. Use Flexbox for header.
+        3. Main section should have 2 columns.
+        4. Use CSS Grid for Article and Sidebar.
+        5. Article should contain 3 boxes using Flexbox.
+        6. Footer should be full width and centered.
+        7. Use @keyframes to animate one element.
+        8. On mobile screen everything should become one column.
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        /* =========================
+           HEADER - FLEXBOX
+           ========================= */
+
+        header {
+            background: #333;
+            color: white;
+
+            padding: 20px 40px;
+
+            /* Flexbox */
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           MAIN - CSS GRID
+           ========================= */
+
+        main {
+            display: grid;
+
+            /* Two columns */
+            grid-template-columns: 2fr 1fr;
+
+            gap: 25px;
+
+            padding: 30px;
+        }
+
+        /* =========================
+           ARTICLE
+           ========================= */
+
+        article {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        article h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Three boxes using Flexbox */
+        .article-boxes {
+            display: flex;
+
+            gap: 20px;
+        }
+
+        .box {
+            flex: 1;
+
+            background: #ddd;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 10px;
+        }
+
+        /* =========================
+           SIDEBAR
+           ========================= */
+
+        aside {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 10px;
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* =========================
+           ANIMATION
+           ========================= */
+
+        .animated-box {
+            margin-top: 30px;
+
+            padding: 15px;
+
+            background: #333;
+            color: white;
+
+            text-align: center;
+
+            border-radius: 8px;
+
+            /* Animation */
+            animation: moveBox 2s infinite alternate;
+        }
+
+        /* Keyframes */
+        @keyframes moveBox {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(30px);
+            }
+
+        }
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+            width: 100%;
+
+            background: #333;
+
+            color: white;
+
+            padding: 20px;
+
+            /* Center content */
+            text-align: center;
+        }
+
+        /* =========================
+           MOBILE RESPONSIVE
+           ========================= */
+
+        @media (max-width: 700px) {
+
+            /* Header becomes vertical */
+            header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            /* Main becomes one column */
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            /* Three article boxes become vertical */
+            .article-boxes {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+
+        <!-- Logo -->
+        <h1>My Website</h1>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+         ========================= -->
+
+    <main>
+
+        <!-- Article Section -->
+        <article>
+
+            <h2>My Articles</h2>
+
+            <!-- Three boxes using Flexbox -->
+            <div class="article-boxes">
+
+                <div class="box">
+                    <h3>HTML</h3>
+                    <p>Learn HTML basics.</p>
+                </div>
+
+                <div class="box">
+                    <h3>CSS</h3>
+                    <p>Learn CSS styling.</p>
+                </div>
+
+                <div class="box">
+                    <h3>JavaScript</h3>
+                    <p>Learn JavaScript basics.</p>
+                </div>
+
+            </div>
+
+            <!-- Animated Element -->
+            <div class="animated-box">
+                This box is animated!
+            </div>
+
+        </article>
+
+
+        <!-- Sidebar -->
+        <aside>
+
+            <h2>Sidebar</h2>
+
+            <ul>
+                <li>Latest Posts</li>
+                <li>Categories</li>
+                <li>Web Development</li>
+                <li>Programming</li>
+                <li>Contact Me</li>
+            </ul>
+
+        </aside>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <p>© 2026 My Website. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q4 - Dashboard</title>
+
+    <style>
+
+        /* =====================================================
+           Q4: BUILD A DASHBOARD LAYOUT USING CSS GRID
+
+           Requirements:
+           1. Header top par across all columns
+           2. Sidebar left side
+           3. Main content mein 4 boxes
+           4. One box should span two columns
+           5. Grid gap and fr units
+           6. Hover effect with scale and shadow
+           ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* ================= DASHBOARD ================= */
+
+        .dashboard {
+
+            min-height: 100vh;
+
+            display: grid;
+
+            /* Sidebar + Main */
+            grid-template-columns: 220px 1fr;
+
+            /* Header + Content */
+            grid-template-rows: 80px 1fr;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+
+            /* Header spans all columns */
+            grid-column: 1 / -1;
+
+            background-color: #333;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 20px 30px;
+        }
+
+        /* ================= SIDEBAR ================= */
+
+        aside {
+
+            background-color: #eeeeee;
+
+            padding: 30px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+        aside h2 {
+            margin-bottom: 10px;
+        }
+
+        aside a {
+
+            text-decoration: none;
+
+            color: black;
+
+            padding: 10px;
+
+            border-radius: 5px;
+        }
+
+        aside a:hover {
+
+            background-color: #ddd;
+        }
+
+        /* ================= MAIN CONTENT ================= */
+
+        main {
+
+            padding: 30px;
+
+            display: grid;
+
+            /* 2 columns */
+            grid-template-columns: 1fr 1fr;
+
+            /* Space between boxes */
+            grid-gap: 20px;
+        }
+
+        /* ================= BOXES ================= */
+
+        .box {
+
+            min-height: 180px;
+
+            background-color: #eeeeee;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+
+        .box:hover {
+
+            transform: scale(1.05);
+
+            box-shadow: 0 5px 15px gray;
+        }
+
+        /* One box spans two columns */
+
+        .large {
+
+            grid-column: span 2;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            .dashboard {
+
+                grid-template-columns: 1fr;
+
+                grid-template-rows: auto auto 1fr;
+            }
+
+            header {
+
+                grid-column: 1;
+            }
+
+            aside {
+
+                flex-direction: row;
+
+                justify-content: space-around;
+
+                flex-wrap: wrap;
+            }
+
+            main {
+
+                grid-template-columns: 1fr;
+            }
+
+            .large {
+
+                grid-column: span 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         Q4: DASHBOARD LAYOUT
+         ===================================================== -->
+
+    <div class="dashboard">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+
+            <h1>My Dashboard</h1>
+
+        </header>
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <a href="#">Dashboard</a>
+
+            <a href="#">Profile</a>
+
+            <a href="#">Users</a>
+
+            <a href="#">Settings</a>
+
+            <a href="#">Logout</a>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main>
+
+
+            <!-- Box 1 -->
+
+            <div class="box">
+
+                <div>
+
+                    <h2>Statistics</h2>
+
+                    <p>View Statistics</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Box 2 -->
+
+            <div class="box">
+
+                <div>
+
+                    <h2>Users</h2>
+
+                    <p>120 Users</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Box 3 -->
+
+            <div class="box">
+
+                <div>
+
+                    <h2>Sales</h2>
+
+                    <p>₹50,000</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Box 4 -->
+
+            <div class="box">
+
+                <div>
+
+                    <h2>Reports</h2>
+
+                    <p>View Reports</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Large Box - spans two columns -->
+
+            <div class="box large">
+
+                <div>
+
+                    <h2>Recent Activities</h2>
+
+                    <p>Latest dashboard activities</p>
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+</body>
+</html>

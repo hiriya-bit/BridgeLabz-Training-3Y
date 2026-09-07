@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q9 - Card Flip Animation</title>
+
+    <style>
+
+        /*
+        QUESTION 9:
+        Create a card flip animation.
+
+        Requirements:
+        1. Create one card.
+        2. Front side should contain title and image.
+        3. Back side should contain description.
+        4. Card should flip 180 degrees on hover.
+        5. Use transform-style: preserve-3d.
+        6. Use perspective: 1000px.
+        7. Use rotateY(180deg).
+        8. Flip should be smooth.
+        9. Center the card using Flexbox.
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            /* Center card using Flexbox */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Gives 3D perspective */
+        .card-container {
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+        }
+
+        /* Main card */
+        .card {
+            width: 100%;
+            height: 100%;
+
+            /* Required for 3D effect */
+            transform-style: preserve-3d;
+
+            /* Smooth flipping */
+            transition: transform 0.8s;
+        }
+
+        /* Flip card on hover */
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        /* Common styling for front and back */
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+
+            backface-visibility: hidden;
+
+            border-radius: 15px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+        /* Front side */
+        .front {
+            background: white;
+        }
+
+        .front img {
+            width: 200px;
+            height: 200px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+            margin-bottom: 20px;
+        }
+
+        .front h2 {
+            font-size: 28px;
+        }
+
+        /* Back side */
+        .back {
+            background: #333;
+            color: white;
+
+            /* Initially rotate back side */
+            transform: rotateY(180deg);
+        }
+
+        .back h2 {
+            margin-bottom: 20px;
+        }
+
+        .back p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+
+        <div class="card">
+
+            <!-- Front Side -->
+            <div class="front">
+
+                <img src="images/image.jpeg" alt="Profile">
+
+                <h2>Web Developer</h2>
+
+            </div>
+
+            <!-- Back Side -->
+            <div class="back">
+
+                <h2>About Me</h2>
+
+                <p>
+                    I am a B.Tech student interested in
+                    web development, programming and
+                    learning new technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

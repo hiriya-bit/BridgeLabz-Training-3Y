@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q6 - Responsive Blog</title>
+
+    <style>
+
+        /* =====================================================
+           Q6: DESIGN A RESPONSIVE BLOG LAYOUT USING CSS GRID
+
+           Requirements:
+           - Header with title and nav links
+           - Sidebar on left
+           - Main area with 2 blog posts side-by-side
+           - Footer with contact info
+           - Use grid-template-areas
+           - Below 800px sidebar moves below main
+           - Use gap for equal spacing
+           ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Main Blog Layout */
+
+        .blog {
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            grid-template-rows: auto 1fr auto;
+
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+
+            gap: 20px;
+
+            padding: 20px;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            grid-area: header;
+
+            background-color: #333;
+
+            color: white;
+
+            padding: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+        }
+
+        /* ================= SIDEBAR ================= */
+
+        aside {
+            grid-area: sidebar;
+
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 10px;
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside p {
+            margin-bottom: 15px;
+        }
+
+        /* ================= MAIN ================= */
+
+        main {
+            grid-area: main;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+        /* Blog Posts */
+
+        article {
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+        }
+
+        article h2 {
+            margin-bottom: 15px;
+        }
+
+        article p {
+            line-height: 1.5;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            grid-area: footer;
+
+            background-color: #333;
+
+            color: white;
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 800px) {
+
+            .blog {
+
+                grid-template-columns: 1fr;
+
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 20px;
+
+                text-align: center;
+            }
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         Q6: RESPONSIVE BLOG
+         ===================================================== -->
+
+    <div class="blog">
+
+        <!-- Header -->
+
+        <header>
+
+            <h1>My Blog</h1>
+
+            <nav>
+
+                <a href="#">Home</a>
+
+                <a href="#">Blogs</a>
+
+                <a href="#">About</a>
+
+                <a href="#">Contact</a>
+
+            </nav>
+
+        </header>
+
+
+        <!-- Sidebar -->
+
+        <aside>
+
+            <h2>Categories</h2>
+
+            <p>Technology</p>
+
+            <p>Programming</p>
+
+            <p>Education</p>
+
+            <p>Travel</p>
+
+            <p>Web Development</p>
+
+        </aside>
+
+
+        <!-- Main -->
+
+        <main>
+
+            <!-- Blog Post 1 -->
+
+            <article>
+
+                <h2>Learning HTML and CSS</h2>
+
+                <p>
+                    HTML is used to create the structure of a webpage,
+                    while CSS is used to design and style the webpage.
+                </p>
+
+            </article>
+
+
+            <!-- Blog Post 2 -->
+
+            <article>
+
+                <h2>Why Learn Programming?</h2>
+
+                <p>
+                    Programming helps us solve problems and build
+                    useful websites, applications and software.
+                </p>
+
+            </article>
+
+        </main>
+
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>Contact: example@gmail.com</p>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

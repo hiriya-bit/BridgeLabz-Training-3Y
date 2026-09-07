@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Homepage</title>
+
+    <style>
+
+        /* =================================================
+           Q3: CREATE A 3-SECTION HOMEPAGE USING FLEXBOX
+
+           Header
+           Main
+           Footer
+           ================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            font-family: Arial, sans-serif;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #333;
+            color: white;
+
+            padding: 20px;
+
+            display: flex;
+
+            /* Navigation links evenly spaced */
+            justify-content: space-around;
+
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* ================= MAIN ================= */
+
+        main {
+            flex: 1;
+
+            display: flex;
+
+            /* Three boxes horizontally */
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 30px;
+
+            padding: 30px;
+        }
+
+        .box {
+            flex: 1;
+
+            padding: 50px 20px;
+
+            text-align: center;
+
+            background-color: #eeeeee;
+
+            border-radius: 10px;
+
+            /* Smooth hover */
+            transition: 0.3s;
+        }
+
+        /* Rotate on hover */
+        .box:hover {
+            transform: rotate(2deg);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            width: 100%;
+
+            background-color: #333;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            main {
+                flex-direction: column;
+            }
+
+            .box {
+                width: 90%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =================================================
+         Q3: 3-SECTION HOMEPAGE
+         ================================================= -->
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>My Website</h1>
+
+        <nav>
+
+            <a href="#">Home</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Services</a>
+
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- Services Box -->
+
+        <div class="box">
+
+            <h2>Services</h2>
+
+            <p>
+                We provide different services
+                to our customers.
+            </p>
+
+        </div>
+
+
+        <!-- Projects Box -->
+
+        <div class="box">
+
+            <h2>Projects</h2>
+
+            <p>
+                We create useful and
+                interesting projects.
+            </p>
+
+        </div>
+
+
+        <!-- Contact Box -->
+
+        <div class="box">
+
+            <h2>Contact</h2>
+
+            <p>
+                Contact us for more
+                information.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>© 2026 My Website</p>
+
+    </footer>
+
+</body>
+</html>

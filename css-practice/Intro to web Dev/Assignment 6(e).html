@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q5 - Pricing Section</title>
+
+    <style>
+
+        /* =====================================================
+           Q5: DESIGN A PRICING SECTION USING FLEXBOX
+
+           Requirements:
+           1. Three pricing cards horizontally
+           2. Middle card slightly larger
+           3. Middle card different background color
+           4. Hover -> translateY(-10px)
+           5. Smooth transition
+           6. Fade-in animation using @keyframes
+           7. Below 750px -> cards vertically stack
+           ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            background-color: #f2f2f2;
+
+            padding: 40px;
+        }
+
+        /* ================= HEADING ================= */
+
+        h1 {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        /* ================= PRICING SECTION ================= */
+
+        .pricing {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        /* ================= PRICING CARD ================= */
+
+        .card {
+
+            width: 280px;
+
+            min-height: 330px;
+
+            background-color: white;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            /* Smooth hover transition */
+            transition: transform 0.3s ease;
+
+            /* Fade-in animation */
+            animation: fadeIn 1s ease;
+        }
+
+        /* ================= MIDDLE CARD ================= */
+
+        .middle {
+
+            /* Slightly larger */
+            transform: scale(1.08);
+
+            /* Different background */
+            background-color: lightblue;
+        }
+
+        /* ================= HOVER EFFECT ================= */
+
+        .card:hover {
+
+            transform: translateY(-10px);
+        }
+
+        /* Middle card hover */
+
+        .middle:hover {
+
+            transform: scale(1.08) translateY(-10px);
+        }
+
+        /* ================= BUTTON ================= */
+
+        .card button {
+
+            padding: 10px 25px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            background-color: #333;
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+        /* ================= FADE-IN ANIMATION ================= */
+
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(30px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 750px) {
+
+            .pricing {
+
+                flex-direction: column;
+
+            }
+
+            .card {
+
+                width: 90%;
+
+                max-width: 350px;
+            }
+
+            .middle {
+
+                transform: scale(1);
+            }
+
+            .middle:hover {
+
+                transform: translateY(-10px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         Q5: PRICING SECTION
+         ===================================================== -->
+
+    <h1>Pricing Plans</h1>
+
+
+    <section class="pricing">
+
+
+        <!-- ================= BASIC CARD ================= -->
+
+        <div class="card">
+
+            <h2>Basic</h2>
+
+            <h3>₹499 / Month</h3>
+
+            <p>5 Projects</p>
+
+            <p>Basic Support</p>
+
+            <p>5 GB Storage</p>
+
+            <button>Choose Plan</button>
+
+        </div>
+
+
+        <!-- ================= PRO CARD ================= -->
+
+        <div class="card middle">
+
+            <h2>Pro</h2>
+
+            <h3>₹999 / Month</h3>
+
+            <p>15 Projects</p>
+
+            <p>Priority Support</p>
+
+            <p>50 GB Storage</p>
+
+            <button>Choose Plan</button>
+
+        </div>
+
+
+        <!-- ================= PREMIUM CARD ================= -->
+
+        <div class="card">
+
+            <h2>Premium</h2>
+
+            <h3>₹1499 / Month</h3>
+
+            <p>Unlimited Projects</p>
+
+            <p>24/7 Support</p>
+
+            <p>100 GB Storage</p>
+
+            <button>Choose Plan</button>
+
+        </div>
+
+
+    </section>
+
+</body>
+</html>
