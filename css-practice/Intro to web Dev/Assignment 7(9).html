@@ -1,0 +1,139 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline and Focus Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px;
+            background-color: #222;
+            color: white;
+        }
+
+        form {
+            width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+
+            background-color: white;
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px gray;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+
+            border: 2px solid #ccc;
+            border-radius: 8px;
+
+            box-shadow: 0 2px 5px #ddd;
+        }
+
+        /* Focus outline */
+        input:focus {
+            outline: 3px solid blue;
+            outline-offset: 3px;
+        }
+
+        textarea:focus {
+            outline: 3px dashed green;
+            outline-offset: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+
+            border: none;
+            border-radius: 8px;
+
+            background-color: navy;
+            color: white;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Outline and Focus Styling</h1>
+    </header>
+
+    <main>
+
+        <form>
+
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Enter your message"
+            ></textarea>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Form Styling Practice</p>
+    </footer>
+
+</body>
+</html>
+```

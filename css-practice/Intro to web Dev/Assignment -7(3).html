@@ -1,0 +1,100 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Fixed header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+            z-index: 10;
+        }
+
+        section {
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+        }
+
+        /* Linear gradient */
+        .linear {
+            background: linear-gradient(
+                120deg,
+                blue,
+                purple,
+                pink
+            );
+
+            /* Parallax-like effect */
+            background-attachment: fixed;
+        }
+
+        /* Radial gradient */
+        .radial {
+            background: radial-gradient(
+                circle,
+                orange,
+                red,
+                darkred
+            );
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Gradient Webpage</h1>
+    </header>
+
+    <main>
+
+        <section class="linear">
+            <h2>Linear Gradient</h2>
+            <p>This section uses a linear gradient.</p>
+        </section>
+
+        <section class="radial">
+            <h2>Radial Gradient</h2>
+            <p>This section uses a radial gradient.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Gradient Background Practice</p>
+    </footer>
+
+</body>
+</html>
+```

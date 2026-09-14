@@ -1,0 +1,161 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            padding: 25px;
+            background-color: #222;
+            color: white;
+        }
+
+        .container {
+            min-height: 70vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 60px;
+        }
+
+        /* Margin layer */
+        .margin-layer {
+            padding: 30px;
+            background-color: lightgray;
+        }
+
+        /* Border layer */
+        .border-layer {
+            padding: 10px;
+            border: 15px solid orange;
+            background-color: white;
+        }
+
+        /* Padding layer */
+        .padding-layer {
+            padding: 30px;
+            background-color: lightgreen;
+        }
+
+        /* Content layer */
+        .content-layer {
+            width: 150px;
+            height: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: lightblue;
+        }
+
+        .labels p {
+            margin: 10px;
+        }
+
+        /* Comparison section */
+        .comparison {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .default-box,
+        .border-box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 10px solid black;
+            background-color: lightcoral;
+        }
+
+        /* Default content-box */
+        .default-box {
+            box-sizing: content-box;
+        }
+
+        /* Border-box */
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Box Model</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="box-model">
+
+            <div class="margin-layer">
+
+                <div class="border-layer">
+
+                    <div class="padding-layer">
+
+                        <div class="content-layer">
+                            Content
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="labels">
+                <p>Margin → Outer Space</p>
+                <p>Border → Boundary</p>
+                <p>Padding → Inner Space</p>
+                <p>Content → Actual Content</p>
+            </div>
+
+        </section>
+
+        <section class="comparison">
+
+            <div class="default-box">
+                Default Box
+            </div>
+
+            <div class="border-box">
+                Border-box
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Box Model Practice</p>
+    </footer>
+
+</body>
+</html>
+```

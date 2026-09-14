@@ -1,0 +1,143 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            padding: 25px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+        }
+
+        .content {
+            width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+        }
+
+        /* Attribute selector */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid blue;
+        }
+
+        /* Attribute selector: href starts with https */
+        a[href^="https"] {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Pseudo-class :hover */
+        li:hover {
+            background-color: lightblue;
+        }
+
+        /* Pseudo-class :focus */
+        input:focus {
+            outline: 3px solid orange;
+        }
+
+        /* Pseudo-class :nth-child() */
+        li:nth-child(2) {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Child combinator > */
+        ul > li {
+            margin: 10px;
+        }
+
+        /* Descendant combinator */
+        .content p {
+            line-height: 1.6;
+        }
+
+        /* Adjacent sibling combinator + */
+        h2 + ul {
+            border: 2px solid green;
+            padding: 15px;
+        }
+
+        /* General sibling combinator ~ */
+        h2 ~ p {
+            color: purple;
+        }
+
+        /* Pseudo-element ::before */
+        h2::before {
+            content: "★ ";
+        }
+
+        /* Pseudo-element ::after */
+        h2::after {
+            content: " ★";
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Advanced CSS Selectors</h1>
+    </header>
+
+    <main class="content">
+
+        <h2>My Skills</h2>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>SQL</li>
+        </ul>
+
+        <br>
+
+        <input type="text" placeholder="Enter your name">
+
+        <br><br>
+
+        <a href="https://google.com">HTTPS Link</a>
+
+        <br><br>
+
+        <p>This is the first paragraph.</p>
+
+        <p>This is the second paragraph.</p>
+
+    </main>
+
+    <footer>
+        <p>CSS Selector Practice</p>
+    </footer>
+
+</body>
+</html>
+```

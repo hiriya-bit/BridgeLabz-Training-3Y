@@ -1,0 +1,114 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Depth</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eee;
+            text-align: center;
+        }
+
+        header {
+            padding: 25px;
+            background-color: #222;
+            color: white;
+        }
+
+        header h1 {
+            text-shadow: 3px 3px 5px gray;
+        }
+
+        .cards {
+            min-height: 70vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .card {
+            width: 220px;
+            padding: 40px 20px;
+            background-color: white;
+            border-radius: 15px;
+
+            transition: all 0.4s ease;
+        }
+
+        .card h2 {
+            text-shadow: 2px 2px 3px gray;
+            margin-bottom: 15px;
+        }
+
+        /* Different box shadows */
+        .card1 {
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        .card2 {
+            box-shadow: 0 0 20px gray;
+        }
+
+        .card3 {
+            box-shadow: 10px 10px 20px gray;
+        }
+
+        /* Lift card on hover */
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 10px 20px 30px gray;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Shadows and Depth Effect</h1>
+    </header>
+
+    <main class="cards">
+
+        <article class="card card1">
+            <h2>Profile 1</h2>
+            <p>Different shadow effect.</p>
+        </article>
+
+        <article class="card card2">
+            <h2>Profile 2</h2>
+            <p>Different shadow effect.</p>
+        </article>
+
+        <article class="card card3">
+            <h2>Profile 3</h2>
+            <p>Different shadow effect.</p>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Shadow Practice Page</p>
+    </footer>
+
+</body>
+</html>
+```

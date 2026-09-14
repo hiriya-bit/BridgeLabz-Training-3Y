@@ -1,0 +1,127 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px;
+            background-color: #222;
+            color: white;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        /* Styling strong, em and mark */
+        strong {
+            color: blue;
+        }
+
+        em {
+            color: purple;
+        }
+
+        mark {
+            background-color: yellow;
+            color: black;
+            padding: 3px;
+        }
+
+        /* First letter */
+        .special::first-letter {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        /* First line */
+        .special::first-line {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Typography and Text Styling</h1>
+    </header>
+
+    <main>
+
+        <article>
+
+            <h2>Importance of Good Typography</h2>
+
+            <p>
+                Good typography makes a webpage easy to read and attractive.
+                Different fonts, sizes and weights can be used to create
+                a clear visual hierarchy.
+            </p>
+
+            <p>
+                <strong>Strong text</strong> shows important information.
+                <em>Emphasized text</em> gives extra importance.
+                <mark>Highlighted text</mark> attracts attention.
+            </p>
+
+            <p class="special">
+                CSS provides many properties for controlling text appearance.
+                These properties help developers create readable and balanced pages.
+            </p>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Typography Practice Page</p>
+    </footer>
+
+</body>
+</html>
+```

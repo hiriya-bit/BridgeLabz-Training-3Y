@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo classes</title>
+    <style>
+        .text1 {
+            color: blue;
+        }
+
+        .text:hover {
+            color: red;
+        }
+
+        .btn {
+            background-color: yellow;
+            border: black;
+            border-radius: 5px;
+            padding: 1rem 2rem;
+            /* display: none; */
+            transition: background-color;
+        }
+
+        .btn:hover {
+            background-color: red;
+            color: white;
+            border: 2px solid green;
+            cursor: pointer;
+            transition: background 0.3s linear;
+            /*transition: all 0.3s ease-in-out;*/
+
+        }
+
+        #name:focus {
+            border: 2px solid red;
+            outline: none;
+            border-radius: 5px;
+
+        }
+
+        .Fruits {
+            background-color: yellow;
+        }
+
+        /*.Fruits li:first-child{
+            background-color: red
+        }
+        .Fruits li:last-child{
+            background-color: aqua
+        }
+        .Fruits li:nth-child(4){
+            background-color: blueviolet;
+        }
+        .Fruits li:nth-child(even){
+            background-color: blueviolet;
+        }*/
+        .Fruits li:nth-child(odd) {
+            background-color: blueviolet;
+        }
+
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: chartreuse;
+            border-radius: 5px;
+            transition: transform .3s linear;
+
+        }
+
+        .box:hover {
+            /* transition: transition .3s linear; */
+            /*transform: translateX(5rem);*/
+            /* transform: translateY(5rem);*/
+            /* transform: translate(5rem 3rem); 
+           transform: scale(1.2);*/
+            transform: rotate(360deg);
+        }
+
+        .text {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .text::after {
+            content: '';
+            height: 5px;
+            width: 0px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: red;
+            transition: width .5s ease-in;
+
+        }
+
+        .text:hover::after {
+            width: 100%;
+        }
+        .text::before{
+            content: 'Previous';
+        }
+        @keyframes animate{
+            from{
+                transform: translate(0);
+            }
+            to{
+                transform: translate3d(5rem);
+                background-radius: 50%;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text1">Hello</h1>
+    <button class="btn">Click me</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <label for="">Enter Name:</label>
+    <br>
+    <input type="text" id="name" placeholder="Enter Name">
+    <ul class="Fruits">
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Litchi</li>
+        <li>Guava</li>
+        <li>Papaya</li>
+        <li>Kiwi</li>
+
+    </ul>
+    <div class="text">
+        <h1>Hello World</h1>
+
+    </div>
+</body>
+
+</html>
