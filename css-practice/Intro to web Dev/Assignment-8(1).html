@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pseudo Classes</title>
+
+    <style>
+        /* Basic page styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        header {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Flexbox used to align examples in one row */
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .example {
+            background: white;
+            width: 220px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #aaa;
+        }
+
+        /* :hover example */
+        .hover-link:hover {
+            color: red;
+            background: yellow;
+        }
+
+        /* :focus example */
+        .focus-button:focus {
+            background: green;
+            color: white;
+        }
+
+        /* :active example */
+        .active-button:active {
+            background: blue;
+            color: white;
+        }
+
+        /* :nth-child() example */
+        li:nth-child(2) {
+            background: orange;
+            color: white;
+        }
+
+        li {
+            padding: 8px;
+            margin: 5px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Pseudo-Classes</h1>
+</header>
+
+<main class="container">
+
+    <section class="example">
+        <h2>:hover</h2>
+
+        <a href="#" class="hover-link">Hover Me</a>
+
+        <p>Changes color when mouse is placed over it.</p>
+    </section>
+
+    <section class="example">
+        <h2>:focus</h2>
+
+        <button class="focus-button">Click / Focus</button>
+
+        <p>Changes style when the button gets focus.</p>
+    </section>
+
+    <section class="example">
+        <h2>:active</h2>
+
+        <button class="active-button">Press Me</button>
+
+        <p>Changes style while the button is being pressed.</p>
+    </section>
+
+    <section class="example">
+        <h2>:nth-child()</h2>
+
+        <ul>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+        </ul>
+
+        <p>The second item gets a different background.</p>
+    </section>
+
+</main>
+
+</body>
+</html>

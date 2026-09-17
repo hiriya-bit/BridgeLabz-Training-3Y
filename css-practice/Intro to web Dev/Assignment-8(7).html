@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UI Components</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            /* Soft background gradient */
+            background: linear-gradient(135deg, #dfe9f3, #ffffff);
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Card container */
+        .card {
+            width: 400px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #aaa;
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input {
+            border: 1px solid #aaa;
+        }
+
+        select {
+            border: 1px solid #aaa;
+        }
+
+        button {
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        input:focus,
+        select:focus {
+            outline: 3px solid #b5d8ff;
+            border-color: #007bff;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="card">
+
+    <h1>My UI</h1>
+
+    <input type="text" placeholder="Search here...">
+
+    <select>
+        <option>Select Category</option>
+        <option>Technology</option>
+        <option>Education</option>
+        <option>Sports</option>
+    </select>
+
+    <button>Search</button>
+
+    <button>Submit</button>
+
+</main>
+
+</body>
+</html>

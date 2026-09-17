@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Animations</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        header {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 20px;
+        }
+
+        .animation-container {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            flex-wrap: wrap;
+        }
+
+        /* Moving box */
+        .box {
+            width: 80px;
+            height: 80px;
+            background: red;
+
+            animation-name: moveBox;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes moveBox {
+            from {
+                transform: translateX(-80px);
+            }
+
+            to {
+                transform: translateX(80px);
+            }
+        }
+
+        /* Bouncing ball */
+        .ball {
+            width: 60px;
+            height: 60px;
+            background: blue;
+            border-radius: 50%;
+
+            animation: bounce 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(-60px);
+            }
+
+            to {
+                transform: translateY(60px);
+            }
+        }
+
+        /* Color-changing text */
+        .text {
+            font-size: 30px;
+            font-weight: bold;
+
+            animation: changeColor 3s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        @keyframes changeColor {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: blue;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Animation Demonstration</h1>
+</header>
+
+<main class="animation-container">
+
+    <div class="box"></div>
+
+    <div class="ball"></div>
+
+    <div class="text">
+        Animated Text
+    </div>
+
+</main>
+
+</body>
+</html>

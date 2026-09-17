@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product-CARD</title>
-    <link rel="stylesheet" href="card.css">
-</head>
-<body>
-    <div class="main">
-        <div class="card">
-            <img src="images/boy.png" alt="">
-            <h3 class="title">SHOOLIN</h3>
-            <P class="description">Men Printed Mandarin-Collar Kurta</P>
-            <div class="ratings">
-                <span>2.9 | 29 &#9733</span>
-            </div>
-            <p class="price">$340</p>
-            <p class="offer-price">Offer Price: $306</p>
-        </div>
-    </div>
-</body>
-</html>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas: "item1 item2 item2"
+                          "item1 item3 item4"
+                          "item5 item5 item6";
+    grid-gap: 1rem;
+}
+.item{
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: .5rem;
+}

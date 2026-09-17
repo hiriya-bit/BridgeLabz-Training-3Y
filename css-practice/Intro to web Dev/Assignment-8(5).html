@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Button Collection</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eeeeee;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Flexbox alignment */
+        .buttons {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        /* Primary button */
+        .primary {
+            background: #007bff;
+            color: white;
+            border: none;
+            box-shadow: 0 4px 8px #aaa;
+        }
+
+        /* Secondary button */
+        .secondary {
+            background: #555;
+            color: white;
+            border: none;
+        }
+
+        /* Outline button */
+        .outline {
+            background: white;
+            color: #007bff;
+            border: 2px solid #007bff;
+        }
+
+        /* Hover effect */
+        button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Active effect */
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Focus effect */
+        button:focus {
+            outline: 3px solid orange;
+        }
+
+        /* Disabled button */
+        button:disabled {
+            background: #aaa;
+            color: #555;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Styled Button Collection</h1>
+</header>
+
+<main class="buttons">
+
+    <button class="primary">Primary</button>
+
+    <button class="secondary">Secondary</button>
+
+    <button class="outline">Outline</button>
+
+    <button disabled>Disabled</button>
+
+</main>
+
+</body>
+</html>

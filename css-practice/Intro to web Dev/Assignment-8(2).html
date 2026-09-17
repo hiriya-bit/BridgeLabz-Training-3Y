@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tooltip Demo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eeeeee;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Flexbox centers all examples */
+        .container {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .tooltip-box {
+            position: relative;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 3px 10px #aaa;
+        }
+
+        /* Tooltip initially hidden */
+        .tooltip {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background: black;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+
+            opacity: 0;
+            visibility: hidden;
+
+            /* Smooth fade effect */
+            transition: 0.3s ease-in-out;
+
+            white-space: nowrap;
+        }
+
+        /* Tooltip appears on hover */
+        .tooltip-box:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Tooltip Demonstration</h1>
+</header>
+
+<main class="container">
+
+    <div class="tooltip-box">
+        🔍 Search
+        <span class="tooltip">Search something</span>
+    </div>
+
+    <div class="tooltip-box">
+        ❤️ Like
+        <span class="tooltip">Like this item</span>
+    </div>
+
+    <div class="tooltip-box">
+        ⚙ Settings
+        <span class="tooltip">Open Settings</span>
+    </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini User Interface</title>
+
+    <style>
+        /* Apply border-box to all elements */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eeeeee;
+        }
+
+        /* Header */
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Main layout */
+        main {
+            min-height: 500px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        /* Main card */
+        .card {
+            width: 450px;
+            background: white;
+            padding: 30px;
+
+            border: 1px solid #ddd;
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px #aaa;
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Small image */
+        .card img {
+            width: 120px;
+            height: 120px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            display: block;
+            margin: auto;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input {
+            padding: 12px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+        }
+
+        /* Focus effect */
+        input:focus {
+            outline: 3px solid #b5d8ff;
+            border-color: #007bff;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #007bff;
+            color: white;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Active effect */
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 500px) {
+            .card {
+                width: 100%;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Mini UI</h1>
+</header>
+
+<main>
+
+    <section class="card">
+
+        <!-- Small image -->
+        <img src="https://picsum.photos/150" alt="Profile Image">
+
+        <h2>Registration Form</h2>
+
+        <!-- Form -->
+        <form>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <input
+                type="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Mini User Interface</p>
+</footer>
+
+</body>
+</html>

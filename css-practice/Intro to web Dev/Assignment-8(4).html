@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors</title>
+
+    <style>
+        /* Element selector */
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Class selector */
+        .highlight {
+            background: yellow;
+            padding: 5px;
+        }
+
+        /* ID selector */
+        #special {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Attribute selector */
+        a[target="_blank"] {
+            color: green;
+        }
+
+        /* Descendant selector */
+        .box p {
+            background: #eeeeee;
+            padding: 10px;
+        }
+
+        /* Child combinator > */
+        .list > li {
+            color: blue;
+        }
+
+        /* Adjacent sibling + */
+        h2 + p {
+            font-weight: bold;
+        }
+
+        /* General sibling ~ */
+        h3 ~ p {
+            border-left: 4px solid orange;
+            padding-left: 10px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        header,
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Selectors Practice</h1>
+</header>
+
+<main>
+
+    <h2>Element Selector</h2>
+    <p>This paragraph uses an element selector.</p>
+
+    <h2>Class Selector</h2>
+    <p class="highlight">This paragraph uses a class selector.</p>
+
+    <h2>ID Selector</h2>
+    <p id="special">This paragraph uses an ID selector.</p>
+
+    <h2>Attribute Selector</h2>
+    <a href="#" target="_blank">Open Link</a>
+
+    <div class="box">
+        <h2>Descendant Selector</h2>
+        <p>This paragraph is inside the box.</p>
+    </div>
+
+    <h2>Child Selector</h2>
+
+    <ul class="list">
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+
+    <h2>Adjacent Sibling</h2>
+    <p>This paragraph comes directly after h2.</p>
+
+    <h3>General Sibling</h3>
+    <p>First sibling paragraph.</p>
+    <p>Second sibling paragraph.</p>
+
+</main>
+
+<footer>
+    <p>CSS Selectors Practice Page</p>
+</footer>
+
+</body>
+</html>
