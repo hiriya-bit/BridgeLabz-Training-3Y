@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Responsive heading */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Responsive paragraph */
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Improve readability on small screens */
+@media (max-width: 700px) {
+    .content {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+}

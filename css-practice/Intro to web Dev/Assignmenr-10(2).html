@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Portfolio</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+        /* Profile image size */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Button hover effect */
+        .btn {
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="text-center mt-4 mb-3">
+
+        <h1 class="fw-bold">
+            Riya Tomar
+        </h1>
+
+        <p class="lead">
+            Web Developer & Creative Designer
+        </p>
+
+    </header>
+
+    <main>
+
+        <section class="container text-center p-5">
+
+            <!-- Responsive circular image -->
+            <img src="images/image.jpeg"
+                class="img-fluid rounded-circle profile-img mb-4"
+                alt="Profile Image">
+
+            <h2 class="fw-bold">
+                Hello, I'm Riya
+            </h2>
+
+            <p class="mt-4 mb-4">
+                I create clean, responsive and user-friendly websites
+                using modern web technologies.
+            </p>
+
+            <!-- Buttons -->
+            <div class="mb-4">
+
+                <a href="#" class="btn btn-primary me-2">
+                    Hire Me
+                </a>
+
+                <a href="#" class="btn btn-outline-dark">
+                    Download CV
+                </a>
+
+            </div>
+
+            <!-- Contact Form -->
+            <div class="row justify-content-center">
+
+                <div class="col-md-6">
+
+                    <form>
+
+                        <input type="text"
+                            class="form-control mb-3"
+                            placeholder="Your Name">
+
+                        <input type="email"
+                            class="form-control mb-3"
+                            placeholder="Your Email">
+
+                        <textarea class="form-control mb-3"
+                            rows="4"
+                            placeholder="Your Message"></textarea>
+
+                        <button class="btn btn-dark w-100">
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        © 2026 Riya Tomar
+    </footer>
+
+</body>
+</html>

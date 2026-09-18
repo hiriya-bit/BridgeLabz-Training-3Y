@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog Pagination</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+        article {
+            transition: 0.3s;
+        }
+
+        article:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-dark text-white text-center py-5">
+
+        <h1>
+            Tech Journal
+        </h1>
+
+        <p class="lead mb-0">
+            Latest stories from the world of technology
+        </p>
+
+    </header>
+
+    <main class="container py-5">
+
+        <section>
+
+            <article class="border rounded p-4 mb-4">
+
+                <h2>
+                    How Cloud Computing Is Changing Business
+                </h2>
+
+                <p>
+                    Cloud platforms allow companies to scale their
+                    applications and services without maintaining
+                    expensive physical infrastructure.
+                </p>
+
+            </article>
+
+            <article class="border rounded p-4 mb-4">
+
+                <h2>
+                    Getting Started With Web Development
+                </h2>
+
+                <p>
+                    HTML, CSS and Bootstrap provide a simple foundation
+                    for creating modern responsive websites.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- Bootstrap Pagination -->
+        <nav aria-label="Blog pages">
+
+            <ul class="pagination justify-content-center">
+
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        Previous
+                    </a>
+                </li>
+
+                <li class="page-item active">
+                    <a class="page-link" href="#">
+                        1
+                    </a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        2
+                    </a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        Next
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Pager buttons -->
+        <div class="d-flex justify-content-between mt-5">
+
+            <a href="#" class="btn btn-outline-secondary">
+                ← Older Posts
+            </a>
+
+            <a href="#" class="btn btn-outline-secondary">
+                Newer Posts →
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        © 2026 Tech Journal
+    </footer>
+
+</body>
+</html>

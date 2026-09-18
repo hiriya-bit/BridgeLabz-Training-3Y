@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: white;
+}
+
+/* Grid layout */
+.cheat-sheet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+.topic {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.topic:hover {
+    transform: translateY(-5px);
+    background-color: #e8f0fe;
+}
+
+code {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #eee;
+}
+
+/* Large screens */
+@media (min-width: 1100px) {
+    .cheat-sheet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Small screens */
+@media (max-width: 700px) {
+    .cheat-sheet {
+        grid-template-columns: 1fr;
+    }
+
+    .topic {
+        padding: 20px;
+    }
+}

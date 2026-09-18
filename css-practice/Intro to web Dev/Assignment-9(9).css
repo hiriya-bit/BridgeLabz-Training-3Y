@@ -1,0 +1,96 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main */
+main {
+    padding: 40px 20px;
+}
+
+/* Grid Layout */
+.principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Principle Boxes */
+.principle-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.4s ease;
+}
+
+/* Heading */
+.principle-box h2 {
+    margin-bottom: 15px;
+}
+
+/* Description */
+.principle-box p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Code Example */
+pre {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+/* Hover Effect */
+.principle-box:hover {
+    background: linear-gradient(135deg, #222, #555);
+    color: white;
+    transform: translateY(-8px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .principles {
+        grid-template-columns: 1fr;
+    }
+
+    .principle-box {
+        padding: 20px;
+    }
+}

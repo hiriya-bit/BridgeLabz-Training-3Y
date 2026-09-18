@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Catalog</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+        /* Product card animation */
+        .product-card {
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .product-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-dark text-white text-center py-4">
+
+        <h1>Urban Store</h1>
+
+        <p class="mb-0">
+            Quality Products for Everyday Life
+        </p>
+
+    </header>
+
+    <main class="container py-5">
+
+        <h2 class="text-center mb-4">
+            Our Products
+        </h2>
+
+        <!-- Bootstrap Grid -->
+        <div class="row g-4">
+
+            <!-- col-md-3 = 4 columns on desktop -->
+            <div class="col-12 col-sm-6 col-md-3">
+
+                <div class="card product-card shadow-sm">
+
+                    <img src="https://picsum.photos/400/300?1"
+                        class="card-img-top"
+                        alt="Watch">
+
+                    <div class="card-body text-center">
+
+                        <h5>Classic Watch</h5>
+
+                        <p class="fw-bold">
+                            ₹2,499
+                        </p>
+
+                        <button class="btn btn-primary">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+
+                <div class="card product-card shadow-sm">
+
+                    <img src="https://picsum.photos/400/300?2"
+                        class="card-img-top"
+                        alt="Headphones">
+
+                    <div class="card-body text-center">
+
+                        <h5>Wireless Headphones</h5>
+
+                        <p class="fw-bold">
+                            ₹1,999
+                        </p>
+
+                        <button class="btn btn-primary">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+
+                <div class="card product-card shadow-sm">
+
+                    <img src="https://picsum.photos/400/300?3"
+                        class="card-img-top"
+                        alt="Shoes">
+
+                    <div class="card-body text-center">
+
+                        <h5>Running Shoes</h5>
+
+                        <p class="fw-bold">
+                            ₹2,799
+                        </p>
+
+                        <button class="btn btn-primary">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+
+                <div class="card product-card shadow-sm">
+
+                    <img src="https://picsum.photos/400/300?4"
+                        class="card-img-top"
+                        alt="Backpack">
+
+                    <div class="card-body text-center">
+
+                        <h5>Travel Backpack</h5>
+
+                        <p class="fw-bold">
+                            ₹1,499
+                        </p>
+
+                        <button class="btn btn-primary">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        © 2026 Urban Store
+    </footer>
+
+</body>
+</html>

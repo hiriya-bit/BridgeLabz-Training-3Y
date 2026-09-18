@@ -1,0 +1,95 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 30px 20px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main */
+main {
+    padding: 40px 20px;
+}
+
+/* Comparison Layout */
+.comparison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Image Box */
+.image-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Images */
+.image-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Filtered Image */
+.image-box .filtered {
+    filter: brightness(1.5);
+    transition: filter 0.5s ease;
+}
+
+/* Remove filter on hover */
+.image-box .filtered:hover {
+    filter: brightness(1);
+}
+
+/* Captions */
+.image-box h2 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.image-box p {
+    color: #555;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .image-box img {
+        height: 250px;
+    }
+}

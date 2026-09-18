@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Tracker</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+        .list-group-item {
+            padding: 18px;
+            transition: 0.3s;
+        }
+
+        .list-group-item:hover {
+            background-color: #f1f3f5;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <header class="bg-dark text-white py-4">
+
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <h1 class="mb-0">
+                Task Tracker
+            </h1>
+
+            <!-- Bootstrap Badge -->
+            <span class="badge bg-danger fs-6">
+                Pending: 4
+            </span>
+
+        </div>
+
+    </header>
+
+    <main class="container py-5">
+
+        <section class="card shadow-sm">
+
+            <div class="card-header">
+
+                <h2 class="mb-0">
+                    My Tasks
+                </h2>
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <!-- Bootstrap List Group -->
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                        Complete project report
+
+                        <span class="badge bg-danger">
+                            High
+                        </span>
+
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                        Practice Java DSA
+
+                        <span class="badge bg-warning text-dark">
+                            Medium
+                        </span>
+
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                        Read Bootstrap documentation
+
+                        <span class="badge bg-success">
+                            Low
+                        </span>
+
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                        Prepare presentation
+
+                        <span class="badge bg-danger">
+                            High
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="card-footer text-end">
+
+                <!-- Button with badge -->
+                <button class="btn btn-success">
+
+                    Completed
+
+                    <span class="badge bg-light text-success">
+                        8
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        © 2026 Task Tracker
+    </footer>
+
+</body>
+</html>
