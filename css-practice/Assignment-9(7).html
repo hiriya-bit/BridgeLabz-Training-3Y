@@ -1,0 +1,161 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Responsive Web Demo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header using Flexbox */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #222;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main using Grid */
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .demo-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+
+            animation: fadeIn 1s ease;
+
+            transition: transform 0.3s ease;
+        }
+
+        .demo-section:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Gallery */
+        .gallery img {
+            width: 30%;
+            margin: 1%;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+
+        /* Fade animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Stack below 700px */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .gallery img {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Demo</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">CSS</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <section class="demo-section gallery">
+            <h2>Image Gallery</h2>
+
+            <img src="https://picsum.photos/id/1015/300/200"
+                 alt="Mountain">
+
+            <img src="https://picsum.photos/id/1018/300/200"
+                 alt="Nature">
+
+            <img src="https://picsum.photos/id/1025/300/200"
+                 alt="Dog">
+        </section>
+
+        <section class="demo-section">
+            <h2>Responsive Design</h2>
+
+            <p>
+                Responsive design allows a webpage to adjust itself
+                according to the screen size. CSS Grid, Flexbox and
+                Media Queries are commonly used to create responsive
+                websites.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <h2>Cheat Sheet</h2>
+
+            <p><strong>Grid:</strong> Creates flexible layouts.</p>
+            <p><strong>Flexbox:</strong> Aligns elements easily.</p>
+            <p><strong>Media Query:</strong> Changes styles by screen size.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Contact: demo@example.com | +91 98765 43210</p>
+    </footer>
+
+</body>
+</html>
+```

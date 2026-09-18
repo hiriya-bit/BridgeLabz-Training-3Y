@@ -1,0 +1,202 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Dashboard using CSS Grid */
+        .dashboard {
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            grid-template-rows: 80px 1fr;
+        }
+
+        /* Header */
+        .header {
+            grid-column: 1 / -1;
+
+            display: flex;
+            align-items: center;
+
+            padding: 20px 30px;
+
+            background-color: #222;
+            color: white;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #333;
+            padding: 25px;
+            color: white;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 0;
+        }
+
+        /* Main Content */
+        .content {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+
+            padding: 30px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+
+            animation: loadCard 0.8s ease;
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: scale(1.03);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Load animation */
+        @keyframes loadCard {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Below 750px */
+        @media (max-width: 750px) {
+
+            .dashboard {
+                grid-template-columns: 1fr;
+
+                grid-template-rows:
+                    auto
+                    auto
+                    1fr;
+            }
+
+            .header {
+                grid-column: auto;
+            }
+
+            .sidebar {
+                padding: 20px;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin-right: 15px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>CSS Dashboard</h1>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Menu</h2>
+
+            <a href="#">Dashboard</a>
+            <a href="#">Filters</a>
+            <a href="#">Typography</a>
+            <a href="#">Media Queries</a>
+            <a href="#">Cheat Sheet</a>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+
+            <article class="card">
+                <h2>Filters</h2>
+
+                <p>
+                    CSS filters change the appearance of images.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Typography</h2>
+
+                <p>
+                    Typography controls the appearance and size of text.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Media Queries</h2>
+
+                <p>
+                    Media queries make webpages responsive.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Cheat Sheet Links</h2>
+
+                <p>
+                    Quick examples of useful responsive CSS properties.
+                </p>
+            </article>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
+```

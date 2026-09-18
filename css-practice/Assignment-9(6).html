@@ -1,0 +1,109 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Cheat Sheet</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #222;
+            color: white;
+        }
+
+        /* Grid layout */
+        .cheat-sheet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .topic {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s ease,
+                        background-color 0.3s ease;
+        }
+
+        .topic:hover {
+            transform: translateY(-5px);
+            background-color: #e8f0fe;
+        }
+
+        code {
+            display: block;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        /* 3 columns on large screens */
+        @media (min-width: 1100px) {
+            .cheat-sheet {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Stacked rows below 700px */
+        @media (max-width: 700px) {
+            .cheat-sheet {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive CSS Cheat Sheet</h1>
+    </header>
+
+    <main>
+        <section class="cheat-sheet">
+
+            <article class="topic">
+                <h2>Filters</h2>
+                <p>Used to change the visual appearance of images.</p>
+                <code>filter: grayscale(100%);</code>
+            </article>
+
+            <article class="topic">
+                <h2>Media Queries</h2>
+                <p>Used to apply CSS according to screen size.</p>
+                <code>@media (max-width: 700px)</code>
+            </article>
+
+            <article class="topic">
+                <h2>Responsive Design</h2>
+                <p>Design that works on different devices.</p>
+                <code>width: 100%;</code>
+            </article>
+
+            <article class="topic">
+                <h2>Typography</h2>
+                <p>Responsive text can use relative units.</p>
+                <code>font-size: clamp(...);</code>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
+```

@@ -1,0 +1,132 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header using Flexbox */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #222;
+            color: white;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Three feature boxes */
+        .features {
+            display: flex;
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .feature-box {
+            flex: 1;
+            padding: 30px;
+            text-align: center;
+            background-color: #e8f0fe;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+
+        /* Stack boxes below 750px */
+        @media (max-width: 750px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MyWebsite</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="features">
+
+            <article class="feature-box">
+                <h2>Fast</h2>
+                <p>Our website provides fast performance.</p>
+            </article>
+
+            <article class="feature-box">
+                <h2>Responsive</h2>
+                <p>The layout works on different screen sizes.</p>
+            </article>
+
+            <article class="feature-box">
+                <h2>Modern</h2>
+                <p>Clean and modern design using CSS.</p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 MyWebsite</p>
+    </footer>
+
+</body>
+</html>
+```

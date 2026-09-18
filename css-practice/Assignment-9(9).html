@@ -1,0 +1,117 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Principles</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #222;
+            color: white;
+        }
+
+        /* Three-column Grid */
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .principle {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+
+            transition: background 0.4s ease,
+                        color 0.4s ease;
+        }
+
+        /* Gradient and text color on hover */
+        .principle:hover {
+            background: linear-gradient(135deg, #222, #555);
+            color: white;
+        }
+
+        code {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #eee;
+            color: #222;
+        }
+
+        /* Single column below 600px */
+        @media (max-width: 600px) {
+            .principles {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Design Principles</h1>
+    </header>
+
+    <main>
+        <section class="principles">
+
+            <article class="principle">
+                <h2>Fluid Layouts</h2>
+
+                <p>
+                    Fluid layouts use flexible sizes so content can
+                    adjust according to screen width.
+                </p>
+
+                <code>width: 100%;</code>
+            </article>
+
+            <article class="principle">
+                <h2>Flexible Media</h2>
+
+                <p>
+                    Images and videos should resize according to
+                    available screen space.
+                </p>
+
+                <code>max-width: 100%;</code>
+            </article>
+
+            <article class="principle">
+                <h2>Breakpoints</h2>
+
+                <p>
+                    Breakpoints allow CSS rules to change at
+                    different screen sizes.
+                </p>
+
+                <code>
+                    @media (max-width: 600px)
+                </code>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
+```
