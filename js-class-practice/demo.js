@@ -566,23 +566,202 @@ console.log(true=="HII")**/
 // console.log(missingNumber([0, 1]));    // Output: 2
 
 //Q16
-function greaterThanThreshold(nums, threshold) {
-    let result = [];
+// function greaterThanThreshold(nums, threshold) {
+//     let result = [];
 
-    for (let num of nums) {
-        if (num > threshold) {
-            result.push(num);
-        }
-    }
+//     for (let num of nums) {
+//         if (num > threshold) {
+//             result.push(num);
+//         }
+//     }
 
-    return result;
+//     return result;
+// }
+
+// console.log(greaterThanThreshold([2, 8, 5, 10, 3], 5));
+// // Output: [8, 10]
+
+// console.log(greaterThanThreshold([1, 2, 3], 5));
+// // Output: []
+
+// console.log(greaterThanThreshold([6, 7, 8], 5));
+// // Output: [6, 7, 8]
+
+//Q17
+// let nums = [1, 2, 3, 4, 5];
+
+// if (nums.length > 0) {
+//     let first = nums[0];
+
+//     for (let i = 0; i < nums.length - 1; i++) {
+//         nums[i] = nums[i + 1];
+//     }
+
+//     nums[nums.length - 1] = first;
+// }
+
+// console.log(nums);
+
+//Q18
+// let nums = [1, 2, 3, 4, 5];
+// if (nums.length > 0) {
+//     let last = nums[nums.length - 1];
+//     for (let i = nums.length - 1; i > 0; i--) {
+//         nums[i] = nums[i - 1];
+//     }
+
+//     nums[0] = last;
+// }
+// console.log(nums);
+
+//23-october-26
+// function abc(){
+//     let arr = [2,3,4,5,6,7];
+//     for(let i = 0;i<arr.length;i++){
+//         console.log(arr[i])
+//     }
+//     for(let  a of arr){
+//         console.log(a);
+//     }
+// }
+
+
+// function abc(){
+//     let ob = [{names:"abc", classes:"xyz"},//index 0 
+//         {names:"abc", classes:"xyz"},//index 1
+//             {names:"abc", classes:"xyz"}//index 2
+//     ]
+//           console.log(ob[1]);
+    
+// }
+// abc();
+
+//     let a = {
+
+//     }
+// }
+//Q19
+// let nums = [1, 2, 3, 4, 5, 6, 7];
+// let k = 3;
+// function reverse(nums, start, end) {
+//     while (start < end) {
+//         let temp = nums[start];
+//         nums[start] = nums[end];
+//         nums[end] = temp;
+
+//         start++;
+//         end--;
+//     }
+// }
+// if (nums.length > 0) {
+//     k = k % nums.length;
+//     reverse(nums, 0, nums.length - 1);
+//     reverse(nums, 0, k - 1);
+//     reverse(nums, k, nums.length - 1);
+// }
+// console.log(nums);
+
+//Q20
+// let a = [1, 2, 2, 3];
+// let b = [2, 3, 4];
+// let union = [...new Set([...a, ...b])];
+// console.log(union);
+
+//Q21
+// let a = [1, 2, 2, 3];
+// let b = [2, 2, 4];
+
+// let setB = new Set(b);
+// let result = [...new Set(a.filter(num => setB.has(num)))];
+
+// console.log(result);
+
+//Q22
+// let nums = [1, 2, 2, 3, 1, 2];
+// let freq = {};
+// for (let num of nums) {
+//     if (freq[num]) {
+//         freq[num]++;
+//     } else {
+//         freq[num] = 1;
+//     }
+// }
+// console.log(freq);
+
+//Q23
+// let nums = [4, 2, 4, 3, 2, 4, 2];
+// let freq = {};
+// for (let num of nums) {
+//     if (freq[num]) {
+//         freq[num]++;
+//     } else {
+//         freq[num] = 1;
+//     }
+// }
+// let maxFreq = 0;
+// let result = Infinity;
+// for (let num in freq) {
+//     let value = Number(num);
+//     if (freq[num] > maxFreq ||
+//         (freq[num] === maxFreq && value < result)) {
+//         maxFreq = freq[num];
+//         result = value;
+//     }
+// }
+// console.log(result);
+
+// 27-10-26
+
+// function getpagination(page = 0, limit = 10){
+//     if(page >! 0){
+//         console.log("user is new");
+//     }
+//     console.log("page", page);
+//     console.log("limit", limit)
+// }
+// getpagination();
+// getpagination(2);
+// getpagination(2,100);
+
+
+// function price(a,b=a*10){
+//     console.log(a,b)
+// }
+// price(2,59);
+
+
+// function a(bs = 10){
+//     console.log(bs);
+// }
+// a(0);
+// a(null);
+// a(undefined);
+// a(200);
+
+
+// function abc(a,b){
+//     console.log(a,b)
+//     console.log("HII");
+// }
+// function xyz(a,b, callback){
+//     callback(a,b)
+// }
+// xyz(a, b, abc)
+
+
+function app(){
+    console.log("app file");
 }
+(function(){
+    app()
+    console.log("HII", name);
+})("shree");
 
-console.log(greaterThanThreshold([2, 8, 5, 10, 3], 5));
-// Output: [8, 10]
 
-console.log(greaterThanThreshold([1, 2, 3], 5));
-// Output: []
 
-console.log(greaterThanThreshold([6, 7, 8], 5));
-// Output: [6, 7, 8]
+(function(){
+    app()
+    console.log("HII");
+})()
+
+ 
